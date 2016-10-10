@@ -1,0 +1,80 @@
+<div class="ui fluid container">
+  <div class="ui center aligned grid">
+    <div class="row">
+      <div class="column">
+        <img class="ui centered image" src="../assets/logo-535fbf91c21e3757256506c2.png" style="width: 220px; height: 220px;">
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <h1>ABCDEFG</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="ui center aligned stacked segment" style="min-width: 500px;">
+        <div class="ui left aligned fluid container">
+          <div ng-show="vm.showSinginDiv" class="ui form">
+            <div class="field">
+              <label>Email</label>
+              <input ng-model="vm.email">
+            </div>
+            <div class="field">
+              <label>Password</label>
+              <input type="password" ng-model="vm.password">
+            </div>
+            <button ng-click="vm.signIn()" class="ui blue fluid button" ng-class="{loading: vm.signInLoading}">Sign In</button>
+            <br>
+            <button ng-click="vm.showRegister()" class="ui green fluid button">Register</button>
+
+            <br>
+            <button ng-click="vm.showForgotPassword()" class="ui green fluid button">Forget password ?</button>
+            
+          </div>
+
+          <div ng-show="vm.showRegisterDiv" class="ui form">
+            <h2>Register</h2>
+            <div class="field">
+              <label>Email</label>
+              <input ng-model="vm.registerEmail">
+            </div>
+            <div class="field">
+              <label>Password</label>
+              <input type="password" ng-model="vm.registerPassword">
+            </div>
+            
+            <button ng-click="vm.signUp()" class="ui green fluid button" ng-class="{loading: vm.signUpLoading}">Register</button>
+            <br>
+            <button ng-click="vm.showSingin()" class="ui blue fluid button" >Back</button>
+            <br>
+          </div>
+
+          <div ng-show="vm.showForgotPasswordDiv" class="ui form">
+            <h2>ForgotPassword</h2>
+            <div class="field">
+              <label>Email</label>
+              <input ng-model="vm.forgotEmail">
+            </div>
+            
+            
+            <button ng-click="vm.forgotPassword()" class="ui green fluid button" ng-class="{loading: vm.forgotPasswordLoading}">Submit</button>
+            <br>
+            <button ng-click="vm.showSingin()" class="ui blue fluid button" >Back</button>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="ui center aligned stacked segment" style="min-width: 500px;">
+        <div class="ui left aligned fluid container">
+          <div class="ui form">
+            
+            <button ng-click="vm.googleSignIn()" class="ui red fluid button">Google Sign In</button>
+            <br>
+            <button ng-click="vm.signOut()" class="ui pink fluid button">Sign Out</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

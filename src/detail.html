@@ -1,0 +1,9 @@
+<a ui-sref="landing">Back</a>
+<h1>{{vm.type}} Detail</h1>
+<h2>{{vm.data}}</h2>
+
+<div ng-repeat="track in vm.list">
+	{{track.Name}} 
+	<span ng-if="vm.type === 'Album'">(<a ui-sref="detail({type:'Artist',data : track.Artist })">{{track.Artist}}</a>)</span>
+	<span ng-if="vm.type === 'Artist'">(<a ui-sref="detail({type:'Album',data : track.Album })">{{track.Album}}</a>)</span>
+</div>
